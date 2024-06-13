@@ -16,11 +16,20 @@ Users then select whether they want to be part of the premium plan.
 
 From the first use case, there are three entities that can be identified. They are Users, FreeUsers and Paid Users. FreeUsers and PaidUsers are entities formed from specialization relationships from user type.
 
-- **Entity**: Users
-  - **Fields**: user_id, first_name, last_name, email, created_on, user_type, and encrypted_password
+### II. Recipe management use case
+Users visit a website to look at recipes. To save a recipe in the app, users copy and paste the website’s URL. The app would automatically fill into a page that displays the details of this recipe according to the URL. If no match can be found from the URL into a text box, the app would provide suggestions on what to fill in. Users have the option to select what was suggested or select other options. Users have the option to select favorite recipes.
 
-- **Entity**: FreeUsers
-  - **Fields**: user_id 
+From the second use case, we can derive ten entities. One entity to record favorite recipes, eight entities dedicated for recipe and ingredient management, and one entity to keep track of nutritional information of the recipes. Aside from this we have two more entities that result from the specialization generalization relationship of recipe to food type.
 
-- **Entity**: PaidUsers
-  - **Fields**: user_id
+### III. Meal plan management use case
+To create a meal plan for the week, users are able to input which recipe they decide to make per day for different meal types e.g. breakfast, lunch, dinner, and snack.
+From the third use case, we can derive four entities. 
+
+
+## Trigger creation and usecase
+A history table that would enable users to edit the information they have entered previously. Examples would be when users wish to have a different recipe name, change serving size of the recipe, cook time, and many more. 
+
+If the user wishes to revert changes or to remove any information, they are allowed to do so as well because changes made will be recorded. Hence, the attributes that I have included are:
+old_recipe_name, new_recipe_name, old_recipe_URL, new_recipe_URL, old_recipe_serving_size, new_recipe_serving_size, old_recipe_prep_time, new_recipe_prep_time, old_recipe_cook_time, new_recipe_cook_time, and change_date. 
+
+
